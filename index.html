@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fellowship of the ring</title>
+</head>
+
+<body>
+<div id="app">
+  <h1>{{title}}</h1>
+  <li v-for="fellow in fellows">{{fellow.name}}</li>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        created: function () {
+            fetch("storage/storage.json")
+                .then(response => response.json())
+                .then(data => app.fellows = data);
+        },
+        data: {
+            title: 'Fellowship of the Ring',
+            fellows: '',
+        },
+
+    })
+</script>
+
+</html>
