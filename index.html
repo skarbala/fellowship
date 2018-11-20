@@ -8,11 +8,15 @@
   <title>Fellowship of the ring</title>
 </head>
 <body>
+  <style>.active{
+    background-color: yellow;
+  }</style>
 <div id="app">
   <h1>{{title}}</h1>
   <ul>
   <li v-for="fellow in fellows" 
-      v-on:click="clickOne(fellow)"> 
+      v-on:click="clickOne(fellow)"
+      :class="{active:selectedFellows.includes(fellow)}"> 
     {{fellow.name}}
     {{fellow.score}}
   </li>
@@ -41,7 +45,11 @@
         },
         methods:{
           clickOne: function(fellow){
-            if (this.pointsLeft - fellow.score>0 && !containsObject(fellow, this.selectedFellows)) {
+            if (this.selectedFellows.includes(fellow)) {
+              this.selectedFellows.splice(this.selectedFellows.indexOf(fellow),1);
+              this.pointsLeft = this.pointsLeft + fellow.score;
+            }
+             else if (this.pointsLeft - fellow.score>=0) {
             this.pointsLeft = this.pointsLeft - fellow.score;
             fellow.selected  = true;
             this.selectedFellows.push(fellow);
@@ -51,16 +59,6 @@
 
     });
 
-    function containsObject(obj, list) {
-    var i;
-    for (i = 0; i < list.length; i++) {
-        if (list[i] === obj) {
-            return true;
-        }
-    }
-
-    return false;
-}
 </script>
 
 </html>
