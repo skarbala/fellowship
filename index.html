@@ -7,15 +7,25 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Fellowship of the ring</title>
 </head>
-
 <body>
 <div id="app">
   <h1>{{title}}</h1>
-  <li v-for="fellow in fellows">{{fellow.name}}</li>
+  <ul>
+  <li v-for="fellow in fellows" 
+      v-on:click="clickOne(fellow)"> 
+    {{fellow.name}}
+    {{fellow.score}}
+  </li>
+  </ul>
+  <ul class="selected">
+    <li v-for="selectedFellow in selectedFellows">{{selectedFellow.name}}</li>
+  </ul>
+  <div class="counter">{{pointsLeft}}</div>
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
+  var pointsLeft = 20;
     var app = new Vue({
         el: '#app',
         created: function () {
@@ -24,11 +34,33 @@
                 .then(data => app.fellows = data);
         },
         data: {
+          pointsLeft:pointsLeft,  
             title: 'Fellowship of the Ring',
             fellows: '',
+            selectedFellows:[]
         },
+        methods:{
+          clickOne: function(fellow){
+            if (this.pointsLeft - fellow.score>0 && !containsObject(fellow, this.selectedFellows)) {
+            this.pointsLeft = this.pointsLeft - fellow.score;
+            fellow.selected  = true;
+            this.selectedFellows.push(fellow);
+            }
+          }
+        }
 
-    })
+    });
+
+    function containsObject(obj, list) {
+    var i;
+    for (i = 0; i < list.length; i++) {
+        if (list[i] === obj) {
+            return true;
+        }
+    }
+
+    return false;
+}
 </script>
 
 </html>

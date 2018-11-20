@@ -5,7 +5,8 @@
     "surname": "Baggins",
     "nickname":"",
     "race": "Hobbit",
-    "age": 50
+    "age": 50,
+    "score":4
   },
   {
     "id": 2,
@@ -13,7 +14,9 @@
     "surname": "Gamgee",
     "nickname":"Sam",
     "race": "Hobbit",
-    "age": 38
+    "age": 38,
+    "score":5
+
   },
   {
     "id": 3,
@@ -21,7 +24,9 @@
     "surname": "the Grey",
     "nickname":"",
     "race": "Istari",
-    "age": "primeval"
+    "age": "primeval",
+        "score":12
+
   },
   {
     "id": 4,
@@ -29,7 +34,9 @@
     "surname": "",
     "nickname":"",
     "race": "Elf",
-    "age": "500+"
+    "age": "500+",
+        "score":7
+
   },
   {
     "id": 5,
@@ -37,7 +44,9 @@
     "surname": "",
     "nickname":"",
     "race": "Dwarf",
-    "age": "139"
+    "age": "139",
+        "score":6
+
   },
   {
     "id": 6,
@@ -45,7 +54,9 @@
     "surname": "",
     "nickname":"",
     "race": "Man",
-    "age": "87"
+    "age": "87",
+        "score":4
+
   },
   {
     "id": 7,
@@ -53,7 +64,9 @@
     "surname": "",
     "nickname":"",
     "race": "Man",
-    "age": "40"
+    "age": "40",
+     "score":2
+
   },
   {
     "id": 8,
@@ -61,7 +74,9 @@
     "surname": "Brandybuck",
     "nickname":"Merry",
     "race": "Hobbit",
-    "age": "36"
+    "age": "36",
+        "score":3
+
   },
   {
     "id": 9,
@@ -69,7 +84,8 @@
     "surname": "Took",
     "nickname":"Pippin",
     "race": "Hobbit",
-    "age": "28"
+    "age": "28",
+        "score":4
   }
 ]
 
