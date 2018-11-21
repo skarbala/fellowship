@@ -3,51 +3,99 @@
     src: url("hobbitonbrushhand.ttf");
 }
 
-ul {
+ul.list-of-fellows {
     list-style-type: none;
     text-align: left;
     padding-left: 0;
-    padding-right: 0;
-    width: 1000px;
-    margin: 0 auto;
-
+    margin-top: 50px;
 }
 
 .title {
+    display: inline-block;
     font-family: 'Hobbit', serif;
-    text-align: center;
-    font-size: 6em;
+    font-size: 5.5em;
+    color: #666353;
+    text-shadow: 2px 2px 2px #e5dcc1;
+
 }
 
 body {
-    background-color: #363631;
-    color: #D9CE96;
-}
-
-.container {
-    width: 70%;
-    margin: 0 auto;
+    background: url("background.jpg");
+    color: #66635d;
 }
 
 li {
-    border: 1px solid #D9CE96;
-    padding: 15px;
-    width:448px;
-    height:150px;
-    display:inline-block;
-    margin: 10px 10px;
+    padding: 10px 500px;
+    color: #595650;
+}
+
+div.vajcia {
+    padding: 30px;
+    background-color: #e5dcc1;
+    -webkit-box-shadow: 3px 3px 20px 2px rgba(102, 99, 93, 0.22);
+    -moz-box-shadow: 3px 3px 20px 2px rgba(102, 99, 93, 0.22);
+    box-shadow: 3px 3px 20px 2px rgba(102, 99, 93, 0.22);
     transition: all 200ms ease-in;
 }
 
 li h3 {
-    font-size: 2em;
-    margin: 0;
-    font-family: 'Hobbit','serif';
+    font-size: 1.5em;
+    margin: 5px 0;
+    font-family: 'Cinzel', 'serif';
+}
+
+li h2 {
+    font-size: 1.2em;
+    font-family: 'Bitter', 'serif';
 
 }
 
-li:hover {
+li p.points {
+    font-size: 1.5em;
+    font-family: 'Cinzel', 'serif';
+    text-align: right;
+    margin: 0;
+}
+
+div.vajcia:hover:not(active) {
     transform: scale(1.05, 1.05);
-    background-color: #D9CE96;
-    color: #363631;
+    background-color: #fff6db;
+    color: #66635d;
+}
+
+div.active {
+    background-color: #F4A297 !important;
+    transform: scale(1.01);
+}
+
+h1.title {
+    margin: 120px 0 0 150px;
+}
+
+div.points-left {
+    height: 200px;
+    width: 200px;
+    background-color: #e5dcc1;
+    padding: 30px;
+    position: absolute;
+    top: 50px;
+    left: 1315px;
+    -webkit-box-shadow: 3px 3px 20px 2px rgba(102, 99, 93, 0.22);
+    -moz-box-shadow: 3px 3px 20px 2px rgba(102, 99, 93, 0.22);
+    box-shadow: 3px 3px 20px 2px rgba(102, 99, 93, 0.22);
+    transition: all 200ms ease-in;
+    color:#595650;
+}
+
+div.points-left p {
+    font-family: 'Cinzel', 'serif';
+    font-size: 1.2em;
+    text-align: center;
+}
+
+div.points-left h2 {
+    font-family: 'Cinzel', 'serif';
+    font-size: 4em;
+    text-align: center;
+
 }
