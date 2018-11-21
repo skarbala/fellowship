@@ -8,21 +8,29 @@
   <title>Fellowship of the ring</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<div id="app" class="container">
-  <h1 class="title">{{title}}</h1>
-  <h2>Spolocenstvo z ringu</h2>
+  <style>.active{
+    background-color: yellow;
+  }</style>
+<div id="app">
+  <h1>{{title}}</h1>
   <ul>
-    <li v-for="fellow in fellows">
-      <h3>{{fellow.name}} {{fellow.nickname}} {{fellow.surname}}</h3>
-      <p>Age: {{fellow.age}}</p>
-    </li>
+  <li v-for="fellow in fellows"
+      v-on:click="clickOne(fellow)"
+      :class="{active:selectedFellows.includes(fellow)}">
+    {{fellow.name}}
+    {{fellow.score}}
+  </li>
   </ul>
+  <ul class="selected">
+    <li v-for="selectedFellow in selectedFellows">{{selectedFellow.name}}</li>
+  </ul>
+  <div class="counter">{{pointsLeft}}</div>
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
+  var pointsLeft = 20;
     var app = new Vue({
         el: '#app',
         created: function () {
@@ -31,11 +39,27 @@
                 .then(data => app.fellows = data);
         },
         data: {
+          pointsLeft:pointsLeft,
             title: 'Fellowship of the Ring',
             fellows: '',
+            selectedFellows:[]
         },
+        methods:{
+          clickOne: function(fellow){
+            if (this.selectedFellows.includes(fellow)) {
+              this.selectedFellows.splice(this.selectedFellows.indexOf(fellow),1);
+              this.pointsLeft = this.pointsLeft + fellow.score;
+            }
+             else if (this.pointsLeft - fellow.score>=0) {
+            this.pointsLeft = this.pointsLeft - fellow.score;
+            fellow.selected  = true;
+            this.selectedFellows.push(fellow);
+            }
+          }
+        }
 
-    })
+    });
+
 </script>
 
 </html>
