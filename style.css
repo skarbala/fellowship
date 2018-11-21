@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Hobbit';
+    src: url("hobbitonbrushhand.ttf");
+}
+
+ul {
+    list-style-type: none;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+    width: 1000px;
+    margin: 0 auto;
+
+}
+
+.title {
+    font-family: 'Hobbit', serif;
+    text-align: center;
+    font-size: 6em;
+}
+
+body {
+    background-color: #363631;
+    color: #D9CE96;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+li {
+    border: 1px solid #D9CE96;
+    padding: 15px;
+    width:448px;
+    height:150px;
+    display:inline-block;
+    margin: 10px 10px;
+    transition: all 200ms ease-in;
+}
+
+li h3 {
+    font-size: 2em;
+    margin: 0;
+    font-family: 'Hobbit','serif';
+
+}
+
+li:hover {
+    transform: scale(1.05, 1.05);
+    background-color: #D9CE96;
+    color: #363631;
+}
