@@ -6,12 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Fellowship of the ring</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<div id="app">
-  <h1>{{title}}</h1>
-  <li v-for="fellow in fellows">{{fellow.name}}</li>
+<div id="app" class="container">
+  <h1 class="title">{{title}}</h1>
+  <h2>Spolocenstvo z ringu</h2>
+  <ul>
+    <li v-for="fellow in fellows">
+      <h3>{{fellow.name}} {{fellow.nickname}} {{fellow.surname}}</h3>
+      <p>Age: {{fellow.age}}</p>
+    </li>
+  </ul>
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
