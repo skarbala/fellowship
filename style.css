@@ -1,101 +1,95 @@
 @font-face {
-    font-family: 'Hobbit';
-    src: url("hobbitonbrushhand.ttf");
+  font-family: "Hobbit";
+  src: url("hobbitonbrushhand.ttf");
 }
-
-ul.list-of-fellows {
-    list-style-type: none;
-    text-align: left;
-    padding-left: 0;
-    margin-top: 50px;
+div.title-container {
+  padding: 40px 20px 20px 50px;
 }
-
-.title {
-    display: inline-block;
-    font-family: 'Hobbit', serif;
-    font-size: 5.5em;
-    color: #666353;
-    text-shadow: 2px 2px 2px #e5dcc1;
-
+div.title-container h1 {
+  display: inline-block;
+  font-family: "Hobbit", serif;
+  font-size: 6.5em;
+  color: #666353;
+  text-shadow: 5px 5px 1px #e5dcc1;
 }
 
 body {
-    background: url("background.jpg");
-    color: #66635d;
+  background: url("background.png") no-repeat;
+  background-size: 100%;
+}
+
+ul.list-of-fellows {
+  list-style-type: none;
+  text-align: left;
+  padding-left: 0;
 }
 
 li {
-    padding: 10px 500px;
-    color: #595650;
+  padding: 10px 0px;
+  color: #666353;
 }
-
-div.vajcia {
-    padding: 30px;
-    background-color: #e5dcc1;
-    -webkit-box-shadow: 3px 3px 20px 2px rgba(102, 99, 93, 0.22);
-    -moz-box-shadow: 3px 3px 20px 2px rgba(102, 99, 93, 0.22);
-    box-shadow: 3px 3px 20px 2px rgba(102, 99, 93, 0.22);
-    transition: all 200ms ease-in;
+li div.inner {
+  padding: 30px;
+  background-color: #e5dcc1;
+  transition: all 300ms ease-in;
 }
-
-li h3 {
-    font-size: 1.5em;
-    margin: 5px 0;
-    font-family: 'Cinzel', 'serif';
+li div.inner h1 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  font-family: "Cinzel", "serif";
 }
-
-li h2 {
-    font-size: 1.2em;
-    font-family: 'Bitter', 'serif';
-
+li div.inner h2 {
+  font-size: 1em;
+  font-family: "Bitter", "serif";
 }
-
-li p.points {
-    font-size: 1.5em;
-    font-family: 'Cinzel', 'serif';
-    text-align: right;
-    margin: 0;
+li div.inner:hover {
+  transform: scale(1.02);
+  background-color: #fff6db;
 }
-
-div.vajcia:hover:not(active) {
-    transform: scale(1.05, 1.05);
-    background-color: #fff6db;
-    color: #66635d;
+li div.inner.active {
+  background-color: #F4A297 !important;
+  transform: scale(1.02);
 }
-
-div.active {
-    background-color: #F4A297 !important;
-    transform: scale(1.01);
+li div.fellow-points h2 {
+  font-size: 2.5em;
+  font-family: "Cinzel";
+  text-align: center;
 }
-
-h1.title {
-    margin: 120px 0 0 150px;
+li p {
+  font-size: 1.2em;
+  font-family: "Cinzel", "serif";
+  margin: 0;
+  text-align: center;
 }
 
 div.points-left {
-    height: 200px;
-    width: 200px;
-    background-color: #e5dcc1;
-    padding: 30px;
-    position: absolute;
-    top: 50px;
-    left: 1315px;
-    -webkit-box-shadow: 3px 3px 20px 2px rgba(102, 99, 93, 0.22);
-    -moz-box-shadow: 3px 3px 20px 2px rgba(102, 99, 93, 0.22);
-    box-shadow: 3px 3px 20px 2px rgba(102, 99, 93, 0.22);
-    transition: all 200ms ease-in;
-    color:#595650;
+  height: 150px;
+  background-color: #e5dcc1;
+  padding: 20px;
+  color: #666353;
 }
-
-div.points-left p {
-    font-family: 'Cinzel', 'serif';
-    font-size: 1.2em;
-    text-align: center;
-}
-
 div.points-left h2 {
-    font-family: 'Cinzel', 'serif';
-    font-size: 4em;
-    text-align: center;
-
+  font-size: 3em;
 }
+div.points-left h3 {
+  font-size: 1.6em;
+}
+div.points-left h2,
+div.points-left h3 {
+  font-family: "Cinzel", "serif";
+  text-align: center;
+}
+div.points-left p {
+  font-family: "Cinzel", "serif";
+  font-size: 1em;
+  text-align: center;
+}
+
+.box-shadow {
+  -webkit-box-shadow: 3px 3px 20px 2px rgba(102, 99, 93, 0.22);
+  -moz-box-shadow: 3px 3px 20px 2px rgba(102, 99, 93, 0.22);
+  box-shadow: 3px 3px 20px 2px rgba(102, 99, 93, 0.22);
+  transition: all 200ms ease-in;
+}
+
+/*# sourceMappingURL=style.css.map */
